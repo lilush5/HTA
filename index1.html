@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פינת הידעת</title>
+    <style>
+        body {
+            text-align: center;
+            background: url('https://www.ultrashapoel.com/gallery/var/albums/others/in_our_hearts_forever1/ZRSP109900.jpg?m=1711116016') no-repeat center center fixed;
+            background-size: cover;
+        }
+        h1 {
+            font-size: 4em;
+            color: red;
+            border: 5px solid white;
+            display: inline-block;
+            padding: 10px;
+        }
+        img {
+            width: 60%;
+            margin: 20px auto;
+            display: block;
+        }
+        .did-you-know {
+            font-size: 1.2em; /* גודל טקסט טיפה יותר קטן */
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: block;
+            padding: 10px 20px;
+            width: 90%;
+            margin: 20px auto;
+            text-align: right; /* התחלה מצד ימין */
+        }
+    </style>
+</head>
+<body>
+    <h1>פינת הידעת</h1>
+    <img src="https://www.ultrashapoel.com/gallery/var/albums/europe/sal-22-23-eurocup-7-hamburg-towers-away-98-91/Img_1957.jpg?m=1671103104" alt="Img_1957">
+    <div class="did-you-know">
+        <script>
+            const facts = [
+                "הידעת? הפועל תל אביב היא הקבוצה הישראלית השלישית שהצליחה להעפיל לשלב הבתים בליגת האלופות ועשתה זאת בעונת 2010/11. עם זאת היא הראשונה אשר לא אירחה את משחקיה בשלב הבתים באצטדיון רמת גן, והצליחה לאחר מאמצים מיוחדים של האוהדים וההנהלה לקבל אישור לאירוח בבלומפילד",
+                "הידעת? אריק איינשטיין, אחד מגדולי הזמרים הישראלים, אשר ידוע באהדתו להפועל תל אביב, היה שחקן נוער בקבוצת הכדורסל ואף קלע 2 נקודות ליגה בודדות במדי הקבוצה הבוגרת במהלך נצחון 34:67 על הפועל י-ם בעונת 1955",
+                "הידעת? ב-2024 מילאה הפועל לראשונה בהיסטוריה את בלומפילד המחודש. 26 אלף אדומים גדשו את היציעים במשחק הבית האחרון של העונה וקבעו שיא של כל הזמנים לקהל האדום אך לא הצליחו למנוע הפסד לאשדוד ונשירה לליגה השניה",
+                "הידעת? נכון לשנת 2011 סיימה מחלקת הכדורגל של הפועל רק שתי עונות בתולדותיה ללא הפסד ביתי. הראשונה הייתה עונת 1933/34 אותה סיימה ללא הפסד כלל, והשנייה עונת 2001/02"
+            ];
+            function updateFact() {
+                const factElement = document.querySelector('.did-you-know p');
+                factElement.textContent = facts[Math.floor(Math.random() * facts.length)];
+            }
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const factElement = document.createElement('p');
+                factElement.textContent = facts[Math.floor(Math.random() * facts.length)];
+                document.querySelector('.did-you-know').appendChild(factElement);
+                setInterval(updateFact, 60000);
+            });
+        </script>
+    </div>
+	<div class="button">
+	<a href="index.html" style="color: red; text-decoration: none;">חזור ⬅️</a> 
+	</div>
+</body>
+</html>
